@@ -1,0 +1,168 @@
+.main__signup{
+  inline-size: 100%;
+  margin-block-start: 5rem;
+  max-inline-size: 69.375rem;
+
+  @include desktop{
+    padding: 0;
+    margin-block-start: 9.3rem;
+    // margin-block-end: 18.75rem;
+  }
+
+  &__wrapper{
+    inline-size: 100%;
+
+    @include desktop{
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 7.8125rem;
+    }
+  }
+
+  &__counter{
+    gap: 4rem;
+
+
+    @include desktop{
+      align-items: flex-start;
+      gap: 2.5rem;
+    }
+
+    header{
+      text-align: center;
+      gap: 1rem;
+
+      h1{
+        max-inline-size: 100%;
+
+        @include desktop{
+          max-inline-size: 16ch;
+        }
+       
+      }
+
+      p{
+        max-inline-size: 60ch;
+
+        @include desktop{
+          max-inline-size: 52ch;
+        }
+      }
+
+      @include desktop{
+        text-align: left;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+    }
+
+    .counter{
+      gap: 1.125rem;
+
+      @include desktop{
+        gap: .5rem;
+      }
+
+      h3{
+        color: black;
+      }
+
+      ul li{
+        background-color: #E9EDFB;
+      }
+
+      ul li span{
+        color: var(--button-primary);
+      }
+    }
+  }
+
+  &__form{
+    inline-size: 100%;
+    max-inline-size: 27.8125rem;
+    transform: translateY(50%);
+
+    @include desktop{
+      transform: translateY(-1.6rem);
+
+    }
+  }
+
+  form{
+    inline-size: 100%;
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+    border-radius: 13px;
+    background-color: white;
+
+    @include desktop{
+      padding: 2.625rem;
+    }
+
+    input, select{
+      background: none;
+      border: none;
+      font-size: 1rem;
+      padding-inline: 1rem;
+      padding-block-end: 1rem;
+      border-bottom: 1px solid #BABDCA;
+      line-height: 28px;
+    }
+
+    button{
+      margin-block-start: 2.5rem;
+    }
+  }
+}
+
+.signup__footer{
+  inline-size: 100%;
+  block-size: 29.0625rem;
+  background-color: var(--footer-background);
+
+  @include tabonly{
+    block-size: 23.75rem;
+  }
+  
+  @include desktop{
+    block-size: 100%;
+    position: absolute;
+    inline-size: 26.25rem;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+// .content__signup{
+
+//   @include desktop{
+//     display: grid;
+//     grid-template: 
+//       'nav footer' auto
+//       'main footer' 1fr / 1fr auto;
+//   }
+// }
+
+// .nav__signup{
+//   @include desktop{
+//   grid-area: nav;
+//   }
+// }
+
+// .main__signup{
+//   @include desktop{
+//   grid-area: main;
+//   }
+// }
+
+// .signup__footer{
+//   @include desktop{
+//     grid-area: footer;
+//     inline-size: 420px;
+//     block-size: 100%;
+   
+//   }
+// }

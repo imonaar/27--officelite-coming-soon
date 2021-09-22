@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.scss">
+
+    <title>Frontend Mentor | Officelite coming soon site</title>
+
+</head>
+<body>
+  <div class="content content__signup flex-col">
+    
+    <div class="nav__wrapper nav__signup">
+        <nav class="nav">
+            <a href="./index.html">
+                <img src="../assets/shared/logo.svg" alt="Officelite Home">
+            </a>
+        </nav>
+    </div>
+
+    <main class="main__signup flex-col p-in">
+      <div class="main__signup__wrapper flex-col">
+
+        <div class="main__signup__counter flex-col">
+          <header class="flex-col">
+            <h1>Work smarter. Save time.</h1>
+            <p>Easily manage your projects. Get on the list and receive in-app perks available only to 
+              early subscribers. We are moving into final development and getting ready for official launch soon.
+            </p>
+          </header>
+
+          <div class="counter flex-col">
+            <h3> coming <span>4 nov 2021</span></h3>
+
+            <ul>
+              <li>
+                <span class="days">47</span>
+                <p>days</p>
+              </li>
+              <li>
+                <span class="hours">07</span>
+                <p>hours</p>
+              </li>
+              <li>
+                <span class="mins">56</span>
+                <p>mins</p>
+              </li>
+              <li>
+                <span class="secs">12</span>
+                <p>secs</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="main__signup__form flex-col">
+          <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email Address">
+            <select name="select" id="pack-select">
+              <option value="Free"> Basic Pack  <span>Free</span> </option>
+              <option value="Pro"> Pro Pack  <span>Free</span> </option>
+              <option value="Ultimate"> Ultimate Pack  <span>Free</span> </option>
+              
+            </select>
+            <input type="number" placeholder="Phone Number">
+            <input type="text" placeholder="Company">
+            <button class="btn"> Get on the list</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="signup__footer">
+      
+    </footer>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.hero{
+  inline-size: 100%;
+  max-inline-size: 69.375rem;
+  margin-block-start: 5rem;
+
+  @include tablet{
+    margin-block-start: 6.5rem;
+  }
+
+  @include desktop{
+    margin-block-start: 5.8rem;
+  }
+
+  &__wrapper{
+    inline-size: 100%;
+    gap: 5rem;
+    justify-content: center;
+
+    @include tablet{
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 3.9375rem;
+      padding-inline: 2.5rem;
+    }
+
+    @include desktop{
+      padding-inline: 0;
+      gap: 5.9375rem;
+    }
+  }
+
+  &__image{
+    inline-size: 10.6875rem;
+    block-size: 12rem;
+    
+    
+    img{
+      display: block;
+      max-block-size: 100%;
+      max-inline-size: 100%;
+      
+    }
+
+    @include tablet{
+      inline-size: 17.5625rem;
+      block-size: 19.625rem;
+    }
+
+    @include tablet{
+      inline-size: 29.6875rem;
+      block-size: 33.1875rem;
+    }
+   
+  }
+
+  &__content{
+    gap: 1.5rem;
+    text-align: center;
+
+    @include tablet{
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+}

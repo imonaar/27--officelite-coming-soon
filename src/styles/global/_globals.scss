@@ -1,0 +1,188 @@
+:root{
+    --button-primary: hsl(228, 100%, 66%);
+    --button-hover: hsl(228, 100%, 75%);
+
+    --headings: hsl(228, 22%, 26%);
+    --text: hsl(227, 13%, 52%);
+
+    --footer-background: hsl(229, 22%, 19%);
+    --Red: hsl(0, 83%, 65%);
+}
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+body{
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-inline-size: 90rem;
+
+  font-family: 'Kumbh Sans', sans-serif;
+
+  background-color: #f2f2f2;
+}
+
+h1, h2, h3, h4{
+  margin: 0;
+  color: var(--headings);
+}
+
+h1{
+  font-size: clamp(2.5rem, 2.1479rem + 1.5023vw, 3.5rem);
+  line-height: clamp(3rem, 2.6479rem + 1.5023vw, 4rem);
+  max-inline-size: 14ch;
+
+  @include desktop{
+    max-inline-size: 17ch;
+  }
+}
+
+p{
+  margin: 0;
+  color: var(--text);
+
+  font-size: clamp(1rem, 0.9560rem + 0.1878vw, 1.125rem);
+  line-height: clamp(1.625rem, 1.5810rem + 0.1878vw, 1.75rem);
+  max-inline-size: 37ch;
+
+  @include desktop{
+    max-inline-size: 50ch;
+  }
+}
+
+.content{
+  inline-size: 100%;
+  
+  
+}
+
+.flex-col{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-in{
+  padding-inline: 1.5rem;
+}
+
+.btn{
+  font-size: 1rem;
+  font-weight: 700;
+  padding: .875rem 2.5625rem;
+  background-color: var(--button-primary);
+  border: none;
+  color: white;
+  box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159);
+  border-radius: 28px;
+  line-height: 1.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:active{
+    text-decoration: none;
+  }
+
+  &-card{
+    padding: .875rem 2.5rem;
+    background-color: #E4EAFF;
+    color: var(--button-primary);
+    box-shadow: none;
+  }
+}
+
+ul, li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.counter{
+  inline-size: 100%;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+
+  @include tablet{
+    gap: .5rem;
+  }
+
+  @include desktop{
+    gap: 0;
+    justify-items: flex-start;
+  }
+
+
+  h3{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    line-height: 3rem;
+    color: white;
+
+    span{
+      color: var(--button-primary);
+    }
+  }
+
+  ul{
+    display: flex;
+    gap: .875rem;
+
+    li{
+      padding: .6875rem 1rem;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      background-color: var(--headings);
+      border-radius: .25rem;
+      gap: .3125rem;
+      inline-size: 4.5rem;
+      
+
+      @include tablet{
+        padding: 18px 1rem;
+        border-radius: .8125rem;
+        inline-size: 6.25rem;
+
+      }
+
+      span{
+        font-variant-numeric: tabular-nums;
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 700;
+        color: white;
+
+        @include tablet{
+          font-size: 3.5rem;
+        }
+      }
+
+      p{
+        font-size: .75rem;
+        line-height: 1.75rem;
+        font-weight: bold;
+
+        @include tablet{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.main{
+  inline-size: 100%;
+
+  @include mobile{
+    margin-block-start: -37.5rem;
+  }
+
+  @include tabonly{
+    margin-block-start: -22.375rem;
+  }
+
+  @include desktop{
+    margin-block-start: -4.375rem;
+
+  }
+
+  &__cards{
+    inline-size: 100%;
+    display: grid;
+    justify-items: center;
+
+    gap: 2rem;
+    max-inline-size: 69.375rem;
+
+    transform: translateY(50%);
+
+    @include desktop{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__cards__card{
+    padding-block: 2.5rem;
+    gap: 2rem;
+    background-color: white;
+    border-radius: .8125rem;
+    inline-size: 100%;
+    max-inline-size: 43.0625rem;
+
+    @include tabonly{
+      padding: 3rem;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    h2{
+      font-size: 1.25rem;
+      line-height: 28px;
+    }
+
+    & > div{
+      display: grid;
+      gap: 3.5rem;
+      margin-block-start: 0.5rem;
+
+      div{
+        &:first-of-type{
+          gap: .5rem;
+        }
+
+        &:last-of-type{
+          gap: 1rem;
+        }
+
+        @include tabonly{
+          align-items: flex-start;
+        }
+      }
+
+      @include tabonly{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10rem;
+      }
+    }
+
+    span{
+      font-size: 3.5rem;
+      line-height: 4rem;
+      font-weight: 700;
+    }
+
+    p{
+      white-space: nowrap;
+    }
+
+    &.active{
+      background-color: var(--button-primary);
+      color: white;
+
+      h2, p{
+        color: white;
+      }
+
+      button{
+        color: var(--button-primary);
+        background-color: white;
+
+        @include tabonly{
+          margin-block-start: .5rem;
+        }
+      }
+    }
+  }
+}
